@@ -1,0 +1,1 @@
+export { SegmentedBarChart } from './SegmentedBarChart';
