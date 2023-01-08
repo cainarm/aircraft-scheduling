@@ -45,7 +45,7 @@ export function FlightList({ flights = [], onSelect }: Props) {
   return (
     <div
       className="flex h-[32rem] flex-col flex-nowrap gap-2 overflow-y-scroll rounded-lg px-2"
-      aria-label={`List of available flights (${flights.length} flights)`}
+      aria-label={`List of available flights`}
 
     >
       {flights.map((flight) => (

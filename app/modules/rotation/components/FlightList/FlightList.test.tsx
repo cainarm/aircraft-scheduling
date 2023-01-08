@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { FlightList } from "./FlightList";
 import type { Flight } from "~/modules/rotation/models/Flight";
-import userEvent from "@testing-library/user-event";
+import UserEvent from "@testing-library/user-event";
 import { describe, it, expect, vi } from "vitest";
 
 const flights: Flight[] = [
@@ -43,7 +43,7 @@ describe("FlightList", () => {
   it("calls the onSelect handler when a flight is clicked", async () => {
     render(<FlightList {...props} />);
 
-    await userEvent.click(screen.getByText("F001"));
+    await UserEvent.click(screen.getByText("F001"));
 
     expect(props.onSelect).toHaveBeenCalledWith(props.flights[0]);
   });
