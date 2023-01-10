@@ -1,5 +1,5 @@
 import React from "react";
-import { Timeline } from "~/components/Timeline";
+import { SegmentedBarChart } from "~/modules/core/components/SegmentedBarChart";
 import type { DataSegment } from "~/modules/core/components/SegmentedBarChart";
 import type { Flight } from "~/modules/rotation/models/Flight";
 import { getPercentageProportion } from "~/modules/core/utils/Number";
@@ -38,9 +38,10 @@ export function RotationTimeline({
   }, [] as DataSegment[]);
 
   return (
-    <Timeline
+    <SegmentedBarChart
       events={events}
       labels={["00:00", "12:00", "23:59"]}
+      aria-hidden
       {...otherProps}
     />
   );
