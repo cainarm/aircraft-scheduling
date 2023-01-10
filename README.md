@@ -12,7 +12,7 @@ A web application that allows the user to optimize utilization of aircrafts by s
 
 ## Getting Started
 - Run `npm install` to install all necessary dependencies.
-- To start the application, run `npm start` or `npm run dev`.
+- To start the application, run `npm run dev`.
 - To run unit tests, use the command `npm run test`.
 
 ## Improvement Ideas

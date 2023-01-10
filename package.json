@@ -12,7 +12,6 @@
     "format": "prettier -w .",
     "check": "prettier -c .",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
-    "start": "remix-serve build",
     "test": "vitest --run",
     "test:watch": "vitest",
     "typecheck": "tsc -b",
