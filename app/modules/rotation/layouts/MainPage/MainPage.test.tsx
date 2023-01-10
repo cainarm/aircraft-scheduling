@@ -240,9 +240,9 @@ async function selectAircraft(id: string) {
 }
 
 async function selectFlight(id: string) {
-  const fligthList = within(screen.getByLabelText("List of available flights"));
+  const flightList = within(screen.getByLabelText("List of available flights"));
 
-  await UserEvent.click(fligthList.getByText(id));
+  await UserEvent.click(flightList.getByText(id));
 }
 
 async function removeFlight(id: string) {
