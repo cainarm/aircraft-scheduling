@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { Flight } from "~/modules/rotation/models/Flight";
-import { unique } from "~/utils/Array";
-import { getPercentageProportion } from "~/utils/Number";
+import { unique } from "~/modules/core/utils/Array";
+import { getPercentageProportion } from "~/modules/core/utils/Number";
 import { SECONDS_IN_A_DAY } from "~/constants/time";
 
 type Props = {

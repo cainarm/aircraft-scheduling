@@ -1,8 +1,8 @@
 import React from "react";
 import { Timeline } from "~/components/Timeline";
 import type { DataSegment } from "~/modules/core/components/SegmentedBarChart";
-import type { Flight } from "~/models/Flight";
-import { getPercentageProportion } from "~/utils/Number";
+import type { Flight } from "~/modules/rotation/models/Flight";
+import { getPercentageProportion } from "~/modules/core/utils/Number";
 import { SECONDS_IN_A_DAY } from "~/constants/time";
 
 type Props = {
@@ -36,8 +36,6 @@ export function RotationTimeline({
 
     return [...total, idleTimeEvent, event, turnAroundEvent];
   }, [] as DataSegment[]);
-
-  console.log(events);
 
   return (
     <Timeline
