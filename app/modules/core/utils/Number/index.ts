@@ -1,0 +1,1 @@
+export { getPercentageProportion } from "./Number";
