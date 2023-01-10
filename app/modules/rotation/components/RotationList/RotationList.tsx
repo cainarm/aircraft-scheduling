@@ -1,5 +1,5 @@
 import type { Flight } from "~/modules/rotation/models/Flight";
-import { CloseIcon } from '~/modules/core/components/Icons';
+import { CloseIcon } from "~/modules/core/components/Icons";
 
 type Props = {
   flights?: Flight[];
@@ -14,10 +14,10 @@ const RotationItem = ({
   onRemove: () => void;
 }) => {
   return (
-    <div className="relative relative rounded-lg border border-gray-200 bg-white p-4">
-      <div className="mb-2 text-lg font-bold">
-        Flight: {flight.ident}
-      </div>
+    <div
+      className="relative relative rounded-lg border border-gray-200 bg-white p-4"
+    >
+      <div className="mb-2 text-lg font-bold">Flight: {flight.ident}</div>
       <div className="flex justify-between">
         <div>
           <div className="mb-2 text-lg font-bold" aria-label="flight origin">
@@ -40,7 +40,7 @@ const RotationItem = ({
         aria-label={`remove flight ${flight.ident} from rotation`}
         onClick={onRemove}
       >
-       <CloseIcon className="text-red-500" />
+        <CloseIcon className="text-red-500" />
       </button>
     </div>
   );
@@ -48,9 +48,9 @@ const RotationItem = ({
 
 export function RotationList({ flights = [], onRemove }: Props) {
   return (
-    <div 
+    <div
       className="flex h-[28rem] flex-col flex-nowrap  gap-2 overflow-y-auto rounded-lg px-2"
-      aria-label={`List of flights in rotation`}  
+      aria-label={`List of flights in rotation`}
     >
       {flights.map((flight) => (
         <RotationItem

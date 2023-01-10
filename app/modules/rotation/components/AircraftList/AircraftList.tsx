@@ -21,6 +21,10 @@ export function AircraftList({ aircrafts, selectedAircraft, onSelect }: Props) {
         <div
           key={aircraft.ident}
           onClick={() => onSelect(aircraft.ident)}
+          tabIndex={1}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") onSelect(aircraft.ident);
+          }}
           className={cx(
             "flex h-20 w-full cursor-pointer flex-col items-center justify-center rounded-lg border bg-white bg-white p-2",
             aircraft.ident === selectedAircraft

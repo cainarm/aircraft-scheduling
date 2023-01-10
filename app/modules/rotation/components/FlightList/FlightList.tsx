@@ -11,6 +11,7 @@ function FlightItem({
 }: { flight: Flight } & React.HtmlHTMLAttributes<HTMLDivElement>) {
   return (
     <div
+      tabIndex={2}
       className="relative cursor-pointer rounded-lg border border-gray-200 bg-white p-2"
       {...otherProps}
     >
@@ -53,6 +54,9 @@ export function FlightList({ flights = [], onSelect }: Props) {
           key={flight.ident}
           flight={flight}
           onClick={() => onSelect(flight)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") onSelect(flight);
+          }}
         />
       ))}
     </div>
